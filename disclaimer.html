@@ -3,145 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Disclaimer | Ramon Casass Parody Site</title>
-<meta name="description" content="Full disclaimer for ramoncasass.com. This is a parody fan page and not affiliated with the real Ramon Casass.">
-<meta name="robots" content="noindex, follow">
+<title>Disclaimer | Ramon Casass / Ramon Casas / latintwunkk Parody</title>
+<meta name="description" content="Disclaimer for the unofficial parody page about Ramon Casass (Ramon Casas / latintwunkk).">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://ramoncasass.com/disclaimer.html">
-<link rel="icon" href="/assets/favicon/favicon.ico" sizes="any">
-<link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/assets/favicon/favicon-96x96.png" type="image/png" sizes="96x96">
-<link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
-<link rel="manifest" href="/assets/favicon/site.webmanifest">
-
+<link rel="stylesheet" href="style.css">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { min-height: 100%; }
-
-  body {
-    font-family: Georgia, 'Times New Roman', serif;
-    color: #1a1a1a;
-    line-height: 1.6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 2rem 1rem;
-    position: relative;
-    background-color: #e5e5e5; 
-    z-index: 1;
+  .disclaimer-page {
+    max-width: 640px;
+    margin: 1.5rem auto;
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #fff #404040 #404040 #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   }
-
-  /* Same Tiled Background Animation */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: -1;
-    background-image: url('assets/hello.jpg'), url('assets/pic1.webp'), url('assets/pic2.webp');
-    background-repeat: repeat, repeat, repeat;
-    background-size: 200px, 200px, 200px; 
-    animation: crossfade 16s infinite alternate ease-in-out;
-  }
-
-  @keyframes crossfade {
-    0%, 25% { opacity: 1; }
-    75%, 100% { opacity: 0.3; } 
-  }
-
-  .card {
-    max-width: 600px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    border: 2px solid #2d5016;
-    border-radius: 6px;
-    padding: 2.5rem 2rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    text-align: left;
-  }
-
-  h1 {
-    font-size: clamp(1.8rem, 6vw, 2.5rem);
-    color: #2d5016;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    border-bottom: 2px solid #a3c78a;
-    padding-bottom: 0.5rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-    color: #2d5016;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-
-  a {
-    color: #E1306C;
-    text-decoration: none;
+  .disclaimer-titlebar {
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: white;
+    font-size: 0.75rem;
     font-weight: bold;
+    padding: 0.3rem 0.5rem;
   }
-
-  a:hover {
-    text-decoration: underline;
+  .disclaimer-body {
+    background: white;
+    margin: 2px;
+    padding: 1.2rem 1rem;
+    font-family: 'MS Sans Serif', Tahoma, Arial, sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #111;
   }
-
-  .back-btn {
-    display: block;
-    width: fit-content;
-    margin: 2rem auto 0;
-    padding: 0.8rem 2rem;
-    background: #2d5016;
-    color: #fff;
-    text-decoration: none;
-    font-family: system-ui, sans-serif;
+  .disclaimer-body h1 {
+    font-size: 1.3rem;
+    color: #000080;
+    margin-bottom: 0.8rem;
+  }
+  .disclaimer-body h2 {
     font-size: 0.95rem;
-    font-weight: bold;
-    border-radius: 4px;
-    text-align: center;
-    transition: background 0.2s;
+    color: #000080;
+    margin: 1rem 0 0.4rem;
   }
-
-  .back-btn:hover {
-    background: #1e3a0e;
-    text-decoration: none;
+  .disclaimer-body p {
+    margin-bottom: 0.6rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0000ee;
+    text-decoration: underline;
+    font-size: 0.75rem;
   }
 </style>
 </head>
 <body>
+<div class="disclaimer-page">
+  <div class="disclaimer-titlebar">Disclaimer - Ramon Casass / Ramon Casas / latintwunkk</div>
+  <div class="disclaimer-body">
+    <h1>Legal Disclaimer</h1>
 
-<div class="card">
-  <h1>Legal Disclaimer</h1>
+    <h2>This Is a Parody</h2>
+    <p>This website (ramoncasass.com) is a <strong>parody, satire, and roast</strong> of Ramon Casass (also known as Ramon Casas and latintwunkk). It is unofficial and is not an official representation of him. It is protected expression.</p>
 
-  <h2>This Is a Parody</h2>
-  <p>This website (<strong>ramoncasass.com</strong>) is a <strong>parody, satire, and roast</strong> created by his favorite twink. It is legally protected expression. It is <strong>not</strong> an official representation of Ramon Casass, and I am not trying to steal his identity—I'm just making fun of it.</p>
+    <h2>No Affiliation</h2>
+    <p>This site is <strong>not affiliated with, endorsed by, or sponsored by</strong> Ramon Casass, Ramon Casas, or latintwunkk. Any resemblance to real events or situations is used for satirical purposes.</p>
 
-  <h2>No Affiliation</h2>
-  <p>This site is <strong>not affiliated with, endorsed by, or sponsored by</strong> Ramon Casass (latintwunkk). Any resemblance to his actual business dealings or bank account is entirely coincidental.</p>
+    <h2>About the Content</h2>
+    <p>The entire website is hyperbolic satire and opinion. Statements on this page are exaggerated for comedic and critical effect. Nothing here should be taken as a factual assertion about any individual.</p>
 
-  <h2>About the "Jokes"</h2>
-  <p>For legal purposes, we must clarify that this entire website is a parody and a joke. However, the claims regarding begging for money from random men and being "nothing of a person" are not just made up—they are based on documented evidence that we have personally heard and witnessed. We are legally obligated to state that Ramon is a fully functioning adult, but we will let the receipts speak for themselves.</p>
+    <h2>No Commercial Purpose</h2>
+    <p>This site does not sell anything, collect payments, or generate revenue. It exists purely as non-commercial commentary.</p>
 
-  <h2>No Commercial Purpose</h2>
-  <p>This site does not sell anything, collect payments, or generate revenue. It exists purely to embarrass him. No services are being offred here, no matter how much he needs the money.</p>
+    <h2>Parody and the Law</h2>
+    <p>Parody and satire are recognized forms of protected expression. Under U.S. and Tennessee law, parody is expressly recognized as a permitted use in right-of-publicity matters. This site is non-commercial, clearly labeled as a parody, and not presented as an official presence.</p>
 
-  <h2>Parody and the Law</h2>
-  <p>Parody is a recognized form of protected expression. Under U.S. and Tennessee law, parody is expressly recognized as a permitted use in right-of-publicity matters. This site is non-commercial, clearly labeled as a parody, and not confusingly presented as an official presence.</p>
-  <p>If Ramon has a legal problem with this page, he can take it up with a lawyer, if he can find one that is pro bono. The joke only works if everyone's laughing, and honestly, I'm laughing the hardest.</p>
+    <h2>Audio Notice</h2>
+    <p>If you clicked the “Click me!!” button, you consented to hearing a voicemail that was left in the state of Tennessee, which is a one-party consent state. We take no responsibility for your speakers being turned up too loud or for any secondhand embarrassment.</p>
 
-  <h2>Audio Notice</h2>
-  <p>If you clicked the "Click me!!" button, you consented to hearing a voicemail that was left in the state of Tennessee which is a one-party state and consent is not required. We take no responsibility for your speakers being turned up too loud, or for the secondhand embarrassment you may feel on his behalf.</p>
-
-  <a href="index.html" class="back-btn">&larr; Back to the Fan Page <3 </a>
+    <a class="back-link" href="index.html">← Back to the Fan Page</a>
+  </div>
 </div>
-
 </body>
 </html>

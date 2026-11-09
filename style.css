@@ -239,9 +239,7 @@ h1 {
   background: #ffffcc;
 }
 
-/* Popup */
-.popup {
-  position: fixed;
+.message-popup {
   width: 260px;
   max-width: calc(100vw - 20px);
   background: #c0c0c0;
@@ -252,7 +250,7 @@ h1 {
   display: none;
 }
 
-.popup-titlebar {
+.message-popup .popup-titlebar {
   background: linear-gradient(to right, #000080, #1084d0);
   color: white;
   font-size: 0.68rem;
@@ -263,7 +261,7 @@ h1 {
   align-items: center;
 }
 
-.popup-body {
+.message-popup .popup-body {
   background: white;
   padding: 0.7rem;
   font-size: 0.75rem;
@@ -271,6 +269,33 @@ h1 {
   margin: 2px;
   border: 1px solid;
   border-color: #404040 #fff #fff #404040;
+}
+
+.image-popup {
+  position: fixed;
+  width: 220px;
+  max-width: 70vw;
+  z-index: 101;
+  display: none;
+  cursor: pointer;
+  animation: wobble 0.4s infinite;
+}
+
+.image-popup img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+}
+
+@keyframes wobble {
+  0%   { transform: rotate(0deg) translateX(0); }
+  20%  { transform: rotate(-2deg) translateX(-2px); }
+  40%  { transform: rotate(2deg) translateX(2px); }
+  60%  { transform: rotate(-1.5deg) translateX(-1px); }
+  80%  { transform: rotate(1.5deg) translateX(1px); }
+  100% { transform: rotate(0deg) translateX(0); }
 }
 
 .aol-btn, .ctrl {
