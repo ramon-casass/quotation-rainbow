@@ -7,7 +7,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.75rem;
   position: relative;
 }
 
@@ -38,6 +38,8 @@ body::before {
   font-size: 0.7rem;
   display: flex;
   gap: 1rem;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .menu-bar span {
@@ -87,6 +89,7 @@ body::before {
   padding: 0.8rem;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .welcome-banner {
@@ -240,6 +243,7 @@ h1 {
 .popup {
   position: fixed;
   width: 260px;
+  max-width: calc(100vw - 20px);
   background: #c0c0c0;
   border: 2px solid;
   border-color: #fff #404040 #404040 #fff;
@@ -286,8 +290,53 @@ h1 {
   line-height: 1;
 }
 
+/* Mobile */
 @media (max-width: 700px) {
-  .aol-main { flex-direction: column; }
-  .channels, .right-sidebar { width: 100%; }
-  .content-grid { grid-template-columns: 1fr; }
+  .aol-main {
+    flex-direction: column;
+  }
+
+  .channels {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 2px solid #404040;
+  }
+
+  .channels-header {
+    display: none;
+  }
+
+  .channel-item {
+    white-space: nowrap;
+    border-bottom: none;
+    border-right: 1px solid #004499;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .right-sidebar {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .welcome-title {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .click-me {
+    padding: 0.7rem 1.4rem;
+  }
 }
