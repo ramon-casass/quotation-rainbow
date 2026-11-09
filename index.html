@@ -9,65 +9,68 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://ramoncasass.com/">
 <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any">
-<link rel="stylesheet" href="style.css?v=0.09">
+<link rel="stylesheet" href="style.css?v=0.10">
 </head>
 <body>
 <div class="aim-window">
-  <!-- Your title bar SVG as the header -->
   <div class="titlebar">
-    <img src="assets/titlebar.svg" alt="Rentboy Instant Messenger" class="titlebar-img">
+    <div class="titlebar-left">
+      <span class="aim-logo"></span>
+      <span class="title-text">Rentboy Instant Messenger</span>
+    </div>
+    <div class="titlebar-controls">
+      <button class="ctrl">_</button>
+      <button class="ctrl">□</button>
+      <button class="ctrl close">X</button>
+    </div>
   </div>
 
-  <div class="window-content">
-    <!-- Buddy list using your friendlist SVG as the frame/header -->
+  <div class="window-body">
     <div class="buddy-list">
-      <img src="assets/friendlist.svg" alt="" class="buddy-frame">
-      <div class="buddy-links">
-        <a href="https://www.instagram.com/ramon_casass/" target="_blank" rel="noopener">ramon_casass</a>
-        <a href="https://www.instagram.com/ramon.casass/" target="_blank" rel="noopener">ramon.casass</a>
-        <a href="https://www.snapchat.com/@ramon642" target="_blank" rel="noopener">Snap: ramon642</a>
-        <a href="https://rent.men/Latintwunkk" target="_blank" rel="noopener">latintwunkk</a>
-        <a href="https://x.com/ClarksvilleTN/status/1729930482018640194/photo/1" target="_blank" rel="noopener">Clarksville Pic</a>
-        <a href="https://www.companyofmen.org/topic/157974-new-cutie-in-weho-relax-with-aiden/" target="_blank" rel="noopener">WeHo Thread</a>
-        <a href="https://onlyfans.com/theramon" target="_blank" rel="noopener">You've Got Mail</a>
-      </div>
+      <div class="buddy-header">Buddy List</div>
+      <a href="https://www.instagram.com/ramon_casass/" target="_blank" rel="noopener">ramon_casass</a>
+      <a href="https://www.instagram.com/ramon.casass/" target="_blank" rel="noopener">ramon.casass</a>
+      <a href="https://www.snapchat.com/@ramon642" target="_blank" rel="noopener">Snap: ramon642</a>
+      <a href="https://rent.men/Latintwunkk" target="_blank" rel="noopener">latintwunkk</a>
+      <a href="https://x.com/ClarksvilleTN/status/1729930482018640194/photo/1" target="_blank" rel="noopener">Clarksville Pic</a>
+      <a href="https://www.companyofmen.org/topic/157974-new-cutie-in-weho-relax-with-aiden/" target="_blank" rel="noopener">WeHo Thread</a>
+      <a href="https://onlyfans.com/theramon" target="_blank" rel="noopener">You've Got Mail</a>
     </div>
 
-    <!-- Main chat area (bigger, like before) -->
-    <div class="chat-area">
-      <div class="welcome">
+    <div class="chat">
+      <div class="status-bar">
         <strong>Ramon Casass / latintwunkk</strong>
-        <span class="status">Offline forever</span>
+        <span>Offline forever</span>
       </div>
 
-      <div class="message-block">
-        <div class="profile">
+      <div class="modules">
+        <div class="module">
           <h1>Ramon Casass</h1>
           <p>latintwunkk, better known as Ramon Casass.</p>
           <p class="best">The best person around! Unfaithful, liar, loser and a nobody.</p>
         </div>
-        <div class="update">
+        <div class="module">
           <p>The mistake only happened once (on record), but the picture lives forever. So silly! :p</p>
           <p>Have to beg for money from random men because I am nothing of a person :D find me at <strong>latintwunkk</strong> everywhere else. Maybe with help, I can grow a personality.</p>
         </div>
       </div>
 
       <div class="news">
-        <div class="news-header">In the News!</div>
-        <div class="news-body">
+        <div class="news-title">In the News!</div>
+        <div class="news-inner">
           <img src="assets/news-screenshot.jpg" alt="News">
           <div>
             <p><strong>Ramon Casas scratches boyfriend during dispute</strong></p>
             <p>24-year-old Ramon Casas was arguing with his boyfriend when the argument became physical. He was determined to be the primary aggressor of the scuffle, taken into custody, and charged with domestic assault.</p>
-            <p class="joke-note">Can you believe this happened! xD</p>
+            <p class="note">Can you believe this happened! xD</p>
           </div>
         </div>
       </div>
 
-      <div class="actions">
-        <button class="aim-btn big" onclick="playAudio()">CLICK ME!!<br><small>You've Got Audio</small></button>
+      <div class="cta">
+        <button onclick="playAudio()">CLICK ME!!<br><small>You've Got Audio</small></button>
         <audio id="ramonAudio" src="assets/ramon_casas.m4a" preload="auto"></audio>
-        <a href="https://www.instagram.com/p/C0PCdPlN_Bw/" target="_blank" rel="noopener" class="link">Find me on other socials as latintwunkk →</a>
+        <a href="https://www.instagram.com/p/C0PCdPlN_Bw/" target="_blank" rel="noopener">Find me on other socials as latintwunkk →</a>
       </div>
 
       <div class="fine-print">
@@ -77,7 +80,6 @@
   </div>
 </div>
 
-<!-- Popups -->
 <div class="popup message-popup" id="messagePopup">
   <div class="popup-title">You've Got Spam!</div>
   <div class="popup-body">
@@ -92,6 +94,6 @@
   <img src="assets/popup.webp" alt="">
 </div>
 
-<script src="script.js?v=0.07"></script>
+<script src="script.js?v=0.08"></script>
 </body>
 </html>
