@@ -292,16 +292,26 @@ h1 {
 
 /* Mobile */
 @media (max-width: 700px) {
+  body {
+    padding: 0.4rem;
+  }
+
   .aol-main {
     flex-direction: column;
   }
 
+  /* Channels become a sticky bottom bar instead of sitting on top of everything */
   .channels {
+    order: 3;
     width: 100%;
     display: flex;
     overflow-x: auto;
     border-right: none;
-    border-bottom: 2px solid #404040;
+    border-top: 2px solid #404040;
+    background: #0066cc;
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
   }
 
   .channels-header {
@@ -312,20 +322,34 @@ h1 {
     white-space: nowrap;
     border-bottom: none;
     border-right: 1px solid #004499;
-    padding: 0.5rem 0.7rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: white;
   }
 
-  .content-grid {
-    grid-template-columns: 1fr;
+  .channel-item:hover,
+  .channel-item.active {
+    background: #ffcc00;
+    color: #000;
+  }
+
+  .main-content {
+    order: 1;
   }
 
   .right-sidebar {
+    order: 2;
     width: 100%;
     border-left: none;
     border-top: 1px solid #ccc;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
   }
 
   .welcome-title {
@@ -338,5 +362,11 @@ h1 {
 
   .click-me {
     padding: 0.7rem 1.4rem;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .popup {
+    max-width: calc(100vw - 16px);
   }
 }
