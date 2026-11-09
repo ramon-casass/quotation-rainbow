@@ -10,13 +10,13 @@
 <meta name="author" content="Friends of Ramon Casass">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://ramoncasass.com/">
+
 <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/assets/favicon/favicon-96x96.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
 <link rel="manifest" href="/assets/favicon/site.webmanifest">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ramon Casass | Worst Boyfriend Parody">
 <meta property="og:description" content="Unofficial parody fan site. Hyperbolic roast of latintwunkk. Not affiliated.">
@@ -26,228 +26,52 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://ramoncasass.com/assets/hello.jpg">
 
-<meta name="google" content="nositelinkssearchbox">
-<meta name="googlebot" content="index, follow">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Ramon Casass Parody Fan Site",
-  "description": "Unofficial hyperbolic parody and roast page. Not affiliated with Ramon Casass or latintwunkk.",
-  "url": "https://ramoncasass.com/"
-}
-</script>
-
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { min-height: 100%; }
-
-  body {
-    font-family: Georgia, 'Times New Roman', serif;
-    color: #1a1a1a;
-    line-height: 1.6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 2rem 1rem;
-    position: relative;
-    background-color: #e5e5e5;
-    z-index: 1;
-  }
-
-  /* Tiled Background Animation */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: -1;
-    background-image: url('assets/hello.jpg'), url('assets/pic1.webp'), url('assets/pic2.webp');
-    background-repeat: repeat, repeat, repeat;
-    background-size: 200px, 200px, 200px;
-    animation: crossfade 16s infinite alternate ease-in-out;
-  }
-
-  @keyframes crossfade {
-    0%, 25% { opacity: 1; }
-    75%, 100% { opacity: 0.3; }
-  }
-
-  .card {
-    max-width: 500px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.94);
-    border: 2px solid #2d5016;
-    border-radius: 6px;
-    padding: 2rem 1.8rem;
-    text-align: center;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  }
-
-  .parody-banner {
-    display: inline-block;
-    background: #fef3c7;
-    border: 2px dashed #d97706;
-    color: #92400e;
-    font-family: system-ui, sans-serif;
-    font-size: 0.72rem;
-    font-weight: bold;
-    padding: 0.35rem 0.9rem;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  .ramon {
-    font-size: clamp(2.2rem, 10vw, 3.8rem);
-    color: #2d5016;
-    letter-spacing: 0.04em;
-    line-height: 1.1;
-    margin-bottom: 0.6rem;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
-  }
-
-  .love {
-    font-size: clamp(1.1rem, 4vw, 1.5rem);
-    color: #1a1a1a;
-    font-style: italic;
-    margin-bottom: 0.4rem;
-  }
-
-  .best {
-    font-size: clamp(1.1rem, 4vw, 1.4rem);
-    color: #4a7c2e;
-    font-weight: bold;
-    letter-spacing: 0.02em;
-    margin-bottom: 0.6rem;
-  }
-
-  .silly-joke {
-    font-size: 1rem;
-    color: #1a1a1a;
-    font-style: italic;
-    margin-bottom: 1.2rem;
-  }
-
-  .business-joke {
-    font-size: 0.95rem;
-    color: #444;
-    margin-bottom: 1.2rem;
-    padding: 0 1rem;
-  }
-
-  .audio-wrapper {
-    margin-bottom: 1.5rem;
-  }
-
-  .audio-btn {
-    display: inline-block;
-    background: #f59e0b;
-    color: #fff;
-    border: none;
-    font-family: system-ui, sans-serif;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
-    transition: transform 0.1s, background 0.2s;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .audio-btn:hover {
-    background: #d97706;
-    animation: wiggle 0.4s ease-in-out infinite;
-  }
-
-  @keyframes wiggle {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(-3deg) scale(1.05); }
-    75% { transform: rotate(3deg) scale(1.05); }
-    100% { transform: rotate(0deg); }
-  }
-
-  .social-links {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 1.5rem;
-  }
-
-  .insta-btn {
-    display: inline-block;
-    background: #E1306C;
-    color: #fff;
-    text-decoration: none;
-    font-family: system-ui, sans-serif;
-    font-size: 0.85rem;
-    font-weight: bold;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    transition: transform 0.2s, background 0.2s;
-  }
-
-  .insta-btn:hover {
-    background: #C13584;
-    transform: scale(1.05);
-  }
-
-  .fine-print {
-    font-family: system-ui, sans-serif;
-    font-size: 0.7rem;
-    color: #666;
-    line-height: 1.5;
-    border-top: 1px solid #ccc;
-    padding-top: 1rem;
-    margin-top: 0.4rem;
-  }
-
-  .fine-print a {
-    color: #2d5016;
-    font-weight: bold;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="card">
-  <div class="parody-banner">Unofficial Parody &amp; Roast</div>
-  <h1 class="ramon">Ramon Casass</h1>
-  
-  <p class="love">latintwunkk, better known as Ramon Casass.</p>
-  <p class="best">The best person around! Unfaithful, liar, loser and a nobody.</p>
-  
-  <p class="silly-joke">
-    The mistake only happened once (on record), but the picture lives forever. So silly! :p
-  </p>
-  <p class="business-joke">
-    Have to beg for money from random men because I am nothing of a person :D find me at <strong>latintwunkk</strong> everywhere else. Maybe with help, I can grow a personality.
-  </p>
+<div class="aol-window" id="mainWindow">
+  <div class="titlebar">
+    <span class="title-text">AOL - Ramon Casass (Parody)</span>
+    <div class="window-controls">
+      <button class="ctrl minimize" onclick="minimizeWindow()">_</button>
+      <button class="ctrl close" onclick="closeWindow()">X</button>
+    </div>
+  </div>
 
-  <div class="audio-wrapper">
-    <button class="audio-btn" onclick="playAudio()">Click me!!</button>
+  <div class="window-body" id="windowBody">
+    <div class="parody-tag">Unofficial Parody &amp; Roast</div>
+    <h1>Ramon Casass</h1>
+    <p class="subtitle">latintwunkk, better known as Ramon Casass.</p>
+    <p class="best">The best person around! Unfaithful, liar, loser and a nobody.</p>
+
+    <p class="joke">The mistake only happened once (on record), but the picture lives forever. So silly! :p</p>
+    <p class="joke">Have to beg for money from random men because I am nothing of a person :D find me at <strong>latintwunkk</strong> everywhere else. Maybe with help, I can grow a personality.</p>
+
+    <button class="aol-button" onclick="playAudio()">Click me!!</button>
     <audio id="ramonAudio" src="assets/ramon_casas.m4a" preload="auto"></audio>
-  </div>
 
-  <div class="social-links">
-    <a href="https://www.instagram.com/p/C0PCdPlN_Bw/" target="_blank" rel="noopener" class="insta-btn">Find me on other socials as latintwunkk</a>
-  </div>
+    <a href="https://www.instagram.com/p/C0PCdPlN_Bw/" target="_blank" rel="noopener" class="aol-link">Find me on other socials as latintwunkk</a>
 
-  <div class="fine-print">
-    This is an unofficial parody page. Not affiliated with or endorsed by Ramon Casass / latintwunkk. Hyperbolic satire only. <a href="disclaimer.html">Full disclaimer</a>.
+    <div class="fine-print">
+      This is an unofficial parody page. Not affiliated with or endorsed by Ramon Casass / latintwunkk. Hyperbolic satire only. <a href="disclaimer.html">Full disclaimer</a>.
+    </div>
   </div>
 </div>
 
-<script>
-  function playAudio() {
-    var audio = document.getElementById("ramonAudio");
-    audio.currentTime = 0;
-    audio.play();
-  }
-</script>
+<!-- Classic AOL-style popup -->
+<div class="popup" id="popup">
+  <div class="popup-titlebar">
+    <span>You've Got Spam!</span>
+    <button class="ctrl close" onclick="closePopup()">X</button>
+  </div>
+  <div class="popup-body">
+    <p><strong>Congratulations!</strong></p>
+    <p>You have been selected for a free personality upgrade.</p>
+    <p style="margin-top: 0.6rem; font-size: 0.75rem;">(Available while supplies last. Ramon not eligible.)</p>
+    <button class="aol-button" onclick="closePopup()" style="margin-top: 0.8rem;">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

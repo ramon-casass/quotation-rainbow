@@ -1,0 +1,196 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;
+  background: #008080;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url('assets/hello.jpg'), url('assets/pic1.webp'), url('assets/pic2.webp');
+  background-repeat: repeat;
+  background-size: 140px;
+  opacity: 0.45;
+}
+
+.aol-window {
+  width: 100%;
+  max-width: 460px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.4);
+}
+
+.titlebar {
+  background: linear-gradient(to right, #000080, #1084d0);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.25rem 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+}
+
+.window-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.ctrl {
+  width: 18px;
+  height: 16px;
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #fff #404040 #404040 #fff;
+  font-family: Arial, sans-serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.ctrl:active {
+  border-color: #404040 #fff #fff #404040;
+}
+
+.window-body {
+  padding: 1.2rem 1rem 1rem;
+  text-align: center;
+  background: #fff;
+  border: 1px solid;
+  border-color: #404040 #fff #fff #404040;
+  margin: 2px;
+}
+
+.parody-tag {
+  display: inline-block;
+  background: #000080;
+  color: white;
+  font-size: 0.62rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #000080;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.best {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.joke {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.aol-button {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+  margin: 0.8rem 0 1rem;
+}
+
+.aol-button:active {
+  border-color: #404040 #fff #fff #404040;
+}
+
+.aol-link {
+  display: inline-block;
+  color: #0000ee;
+  text-decoration: underline;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.aol-link:visited {
+  color: #551a8b;
+}
+
+.fine-print {
+  font-size: 0.62rem;
+  color: #444;
+  border-top: 1px solid #ccc;
+  padding-top: 0.6rem;
+  line-height: 1.35;
+}
+
+.fine-print a {
+  color: #0000ee;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.5);
+  z-index: 100;
+  display: none;
+}
+
+.popup-titlebar {
+  background: linear-gradient(to right, #000080, #1084d0);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-body {
+  background: #fff;
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  text-align: center;
+  border: 1px solid;
+  border-color: #404040 #fff #fff #404040;
+  margin: 2px;
+}
+
+.minimized {
+  height: 28px !important;
+  overflow: hidden;
+}
+
+.minimized .window-body {
+  display: none;
+}
