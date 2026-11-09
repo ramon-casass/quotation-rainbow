@@ -12,21 +12,35 @@ function closeImagePopup() {
   document.getElementById("imagePopup").style.display = "none";
 }
 
-function randomPosition(el) {
-  const maxX = window.innerWidth - el.offsetWidth - 16;
-  const maxY = window.innerHeight - el.offsetHeight - 16;
-  el.style.left = Math.max(8, Math.random() * maxX) + "px";
-  el.style.top = Math.max(8, Math.random() * maxY) + "px";
+function placeOnScreen(el) {
+  // Force a reflow so we get accurate size
+  el.style.display = "block";
+  el.style.visibility = "hidden";
+
+  const w = el.offsetWidth;
+  const h = el.offsetHeight;
+  const maxX = Math.max(8, window.innerWidth - w - 12);
+  const maxY = Math.max(8, window.innerHeight - h - 12);
+
+  el.style.left = (8 + Math.random() * (maxX - 8)) + "px";
+  el.style.top = (8 + Math.random() * (maxY - 8)) + "px";
+  el.style.visibility = "visible";
 }
 
 function drift(el) {
   if (el.style.display === "none") return;
+
+  const w = el.offsetWidth;
+  const h = el.offsetHeight;
   let x = parseFloat(el.style.left) || 0;
   let y = parseFloat(el.style.top) || 0;
-  x += (Math.random() - 0.5) * 50;
-  y += (Math.random() - 0.5) * 50;
-  x = Math.max(8, Math.min(x, window.innerWidth - el.offsetWidth - 8));
-  y = Math.max(8, Math.min(y, window.innerHeight - el.offsetHeight - 8));
+
+  x += (Math.random() - 0.5) * 40;
+  y += (Math.random() - 0.5) * 40;
+
+  x = Math.max(6, Math.min(x, window.innerWidth - w - 6));
+  y = Math.max(6, Math.min(y, window.innerHeight - h - 6));
+
   el.style.left = x + "px";
   el.style.top = y + "px";
 }
@@ -37,17 +51,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   imagePopup.addEventListener("click", closeImagePopup);
 
-  // Message popup first
+  // Message first
   setTimeout(() => {
-    messagePopup.style.display = "block";
-    randomPosition(messagePopup);
-    setInterval(() => drift(messagePopup), 2500);
-  }, 1000);
+    placeOnScreen(messagePopup);
+    setInterval(() => drift(messagePopup), 2800);
+  }, 900);
 
-  // Image popup a little later
+  // Image later so they don’t stack
   setTimeout(() => {
-    imagePopup.style.display = "block";
-    randomPosition(imagePopup);
-    setInterval(() => drift(imagePopup), 1800);
-  }, 2200);
+    placeOnScreen(imagePopup);
+    setInterval(() => drift(imagePopup), 2000);
+  }, 3200);
 });

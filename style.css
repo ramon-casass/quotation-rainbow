@@ -76,6 +76,9 @@ body::before {
   font-size: 0.72rem;
   cursor: default;
   border-bottom: 1px solid #004499;
+  display: block;
+  text-decoration: none;
+  color: white;
 }
 .channel-item:hover,
 .channel-item.active {
@@ -239,13 +242,15 @@ h1 {
   background: #ffffcc;
 }
 
+/* Popups */
 .message-popup {
-  width: 260px;
-  max-width: calc(100vw - 20px);
+  position: fixed;
+  width: 240px;
+  max-width: calc(100vw - 24px);
   background: #c0c0c0;
   border: 2px solid;
   border-color: #fff #404040 #404040 #fff;
-  box-shadow: 5px 5px 0 rgba(0,0,0,0.45);
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.4);
   z-index: 100;
   display: none;
 }
@@ -263,8 +268,8 @@ h1 {
 
 .message-popup .popup-body {
   background: white;
-  padding: 0.7rem;
-  font-size: 0.75rem;
+  padding: 0.65rem;
+  font-size: 0.72rem;
   text-align: center;
   margin: 2px;
   border: 1px solid;
@@ -273,29 +278,27 @@ h1 {
 
 .image-popup {
   position: fixed;
-  width: 220px;
-  max-width: 70vw;
+  width: 180px;
+  max-width: 55vw;
   z-index: 101;
   display: none;
   cursor: pointer;
-  animation: wobble 0.4s infinite;
+  animation: wobble 0.45s infinite;
 }
 
 .image-popup img {
   width: 100%;
   height: auto;
   display: block;
-  border: 2px solid #000;
-  box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
 }
 
 @keyframes wobble {
-  0%   { transform: rotate(0deg) translateX(0); }
-  20%  { transform: rotate(-2deg) translateX(-2px); }
-  40%  { transform: rotate(2deg) translateX(2px); }
-  60%  { transform: rotate(-1.5deg) translateX(-1px); }
-  80%  { transform: rotate(1.5deg) translateX(1px); }
-  100% { transform: rotate(0deg) translateX(0); }
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-2.5deg); }
+  50%  { transform: rotate(2.5deg); }
+  75%  { transform: rotate(-1.5deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .aol-btn, .ctrl {
@@ -325,7 +328,6 @@ h1 {
     flex-direction: column;
   }
 
-  /* Channels become a sticky bottom bar instead of sitting on top of everything */
   .channels {
     order: 3;
     width: 100%;
@@ -349,14 +351,6 @@ h1 {
     border-right: 1px solid #004499;
     padding: 0.6rem 0.8rem;
     font-size: 0.7rem;
-    text-decoration: none;
-    color: white;
-  }
-
-  .channel-item:hover,
-  .channel-item.active {
-    background: #ffcc00;
-    color: #000;
   }
 
   .main-content {
@@ -391,7 +385,8 @@ h1 {
     max-width: 280px;
   }
 
-  .popup {
+  .message-popup,
+  .image-popup {
     max-width: calc(100vw - 16px);
   }
 }
