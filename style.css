@@ -2,7 +2,7 @@
 
 body {
   font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Tahoma, Arial, sans-serif;
-  background: #3a6ea5;
+  background: linear-gradient(180deg, #ff66cc, #66ccff, #ffff66);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -58,7 +58,7 @@ body::before {
 
 .channels {
   width: 150px;
-  background: #0066cc;
+  background: linear-gradient(180deg, #ff3399, #9933ff);
   color: white;
   border-right: 2px solid #404040;
   flex-shrink: 0;
@@ -96,7 +96,7 @@ body::before {
 }
 
 .welcome-banner {
-  background: linear-gradient(to right, #000080, #1084d0);
+  background: linear-gradient(to right, #ff0066, #ff9900, #ffff00);
   color: white;
   padding: 0.5rem 0.8rem;
   display: flex;
@@ -128,7 +128,7 @@ body::before {
 }
 
 .module-header {
-  background: #0066cc;
+  background: linear-gradient(to right, #00ccff, #ff00cc);
   color: white;
   font-size: 0.65rem;
   font-weight: bold;
@@ -163,7 +163,7 @@ h1 {
 }
 
 .click-me {
-  background: linear-gradient(to bottom, #ff9900, #ff6600);
+  background: linear-gradient(to bottom, #ffff00, #ff00ff);
   border: 2px solid;
   border-color: #ffcc66 #cc5500 #cc5500 #ffcc66;
   color: white;
@@ -242,6 +242,31 @@ h1 {
   background: #ffffcc;
 }
 
+.news-module {
+  border: 2px dashed #ff00cc;
+  background: #fff0f5;
+  margin-bottom: 0.8rem;
+  padding: 0.6rem;
+}
+
+.news-content {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.news-img {
+  width: 140px;
+  height: auto;
+  flex-shrink: 0;
+  border: 1px solid #ccc;
+}
+
+.news-text {
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
 /* Popups */
 .message-popup {
   position: fixed;
@@ -284,13 +309,17 @@ h1 {
   display: none;
   cursor: pointer;
   animation: wobble 0.45s infinite;
+  border: none;
+  background: transparent;
+  box-shadow: none;
 }
 
 .image-popup img {
   width: 100%;
   height: auto;
   display: block;
-  box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+  border: none;
+  outline: none;
 }
 
 @keyframes wobble {
@@ -388,5 +417,14 @@ h1 {
   .message-popup,
   .image-popup {
     max-width: calc(100vw - 16px);
+  }
+
+  .news-content {
+    flex-direction: column;
+  }
+  .news-img {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
   }
 }
