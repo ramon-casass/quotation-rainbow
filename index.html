@@ -29,36 +29,89 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="aol-window" id="mainWindow">
-  <div class="titlebar">
-    <span class="title-text">AOL - Ramon Casass (Parody)</span>
-    <div class="window-controls">
-      <button class="ctrl minimize" onclick="minimizeWindow()">_</button>
-      <button class="ctrl close" onclick="closeWindow()">X</button>
-    </div>
+<div class="aol-desktop">
+  <!-- Top menu bar -->
+  <div class="menu-bar">
+    <span>File</span><span>Edit</span><span>Print</span><span>Window</span><span>Sign Off</span><span>Help</span>
   </div>
 
-  <div class="window-body" id="windowBody">
-    <div class="parody-tag">Unofficial Parody &amp; Roast</div>
-    <h1>Ramon Casass</h1>
-    <p class="subtitle">latintwunkk, better known as Ramon Casass.</p>
-    <p class="best">The best person around! Unfaithful, liar, loser and a nobody.</p>
+  <!-- Main AOL window -->
+  <div class="aol-main">
+    <!-- Left channels sidebar -->
+    <div class="channels">
+      <div class="channels-header">Channels</div>
+      <div class="channel-item active">Welcome</div>
+      <div class="channel-item">Mail</div>
+      <div class="channel-item">People</div>
+      <div class="channel-item">Entertainment</div>
+      <div class="channel-item">Games</div>
+      <div class="channel-item">News</div>
+      <div class="channel-item">Local</div>
+      <div class="channel-item">Shopping</div>
+      <div class="channel-item">Sports</div>
+      <div class="channel-item">Travel</div>
+      <div class="channel-item">You've Got Mail</div>
+      <div class="channel-item">You've Got Pictures</div>
+    </div>
 
-    <p class="joke">The mistake only happened once (on record), but the picture lives forever. So silly! :p</p>
-    <p class="joke">Have to beg for money from random men because I am nothing of a person :D find me at <strong>latintwunkk</strong> everywhere else. Maybe with help, I can grow a personality.</p>
+    <!-- Main content area -->
+    <div class="main-content">
+      <div class="welcome-banner">
+        <span class="welcome-title">Welcome to Ramon Casass</span>
+        <span class="date">Today</span>
+      </div>
 
-    <button class="aol-button" onclick="playAudio()">Click me!!</button>
-    <audio id="ramonAudio" src="assets/ramon_casas.m4a" preload="auto"></audio>
+      <div class="content-grid">
+        <div class="profile-module">
+          <div class="module-header">Profile</div>
+          <h1>Ramon Casass</h1>
+          <p class="subtitle">latintwunkk, better known as Ramon Casass.</p>
+          <p class="best">The best person around!<br>Unfaithful, liar, loser and a nobody.</p>
+        </div>
 
-    <a href="https://www.instagram.com/p/C0PCdPlN_Bw/" target="_blank" rel="noopener" class="aol-link">Find me on other socials as latintwunkk</a>
+        <div class="joke-module">
+          <div class="module-header">Latest Update</div>
+          <p>The mistake only happened once (on record), but the picture lives forever. So silly! :p</p>
+          <p style="margin-top: 0.6rem;">Have to beg for money from random men because I am nothing of a person :D find me at <strong>latintwunkk</strong> everywhere else. Maybe with help, I can grow a personality.</p>
+        </div>
+      </div>
 
-    <div class="fine-print">
-      This is an unofficial parody page. Not affiliated with or endorsed by Ramon Casass / latintwunkk. Hyperbolic satire only. <a href="disclaimer.html">Full disclaimer</a>.
+      <div class="action-area">
+        <button class="click-me" onclick="playAudio()">
+          <span class="click-text">CLICK ME!!</span>
+          <span class="click-sub">You've Got Audio</span>
+        </button>
+        <audio id="ramonAudio" src="assets/ramon_casas.m4a" preload="auto"></audio>
+
+        <a href="https://www.instagram.com/p/C0PCdPlN_Bw/" target="_blank" rel="noopener" class="social-link">
+          Find me on other socials as latintwunkk →
+        </a>
+      </div>
+
+      <div class="fine-print">
+        This is an unofficial parody page. Not affiliated with or endorsed by Ramon Casass / latintwunkk. Hyperbolic satire only. <a href="disclaimer.html">Full disclaimer</a>.
+      </div>
+    </div>
+
+    <!-- Right sidebar -->
+    <div class="right-sidebar">
+      <div class="side-module">
+        <div class="module-header">My Places</div>
+        <div class="side-item">Buddy List (0)</div>
+        <div class="side-item">Favorites</div>
+        <div class="side-item">Recently Roasted</div>
+      </div>
+      <div class="side-module">
+        <div class="module-header">Have You Tried?</div>
+        <div class="side-item">Growing a personality</div>
+        <div class="side-item">Not begging</div>
+        <div class="side-item">Being less of a nobody</div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- Classic AOL-style popup -->
+<!-- Popup -->
 <div class="popup" id="popup">
   <div class="popup-titlebar">
     <span>You've Got Spam!</span>
@@ -67,8 +120,8 @@
   <div class="popup-body">
     <p><strong>Congratulations!</strong></p>
     <p>You have been selected for a free personality upgrade.</p>
-    <p style="margin-top: 0.6rem; font-size: 0.75rem;">(Available while supplies last. Ramon not eligible.)</p>
-    <button class="aol-button" onclick="closePopup()" style="margin-top: 0.8rem;">Close</button>
+    <p style="margin-top: 0.5rem; font-size: 0.7rem;">(Ramon not eligible.)</p>
+    <button class="aol-btn" onclick="closePopup()" style="margin-top: 0.7rem;">Close</button>
   </div>
 </div>
 
