@@ -49,11 +49,10 @@ body::before {
 }
 
 .aim-logo {
-  width: 18px;
-  height: 18px;
-  background: #ffcc00;
-  border-radius: 2px;
-  display: inline-block;
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .titlebar-controls {
